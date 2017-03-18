@@ -1,9 +1,21 @@
 class HomeController < ApplicationController
-  def index
-   
-   
-   namelist = Name.new
-   @name = Name.uname
-  
-  end
+    
+    def index
+    end
+
+    def memolist
+    end
+
+    def menu
+    end
+    
+    def reading
+    end
+    
+    def setting
+    end
+
+    def writing
+    end
+    
 end

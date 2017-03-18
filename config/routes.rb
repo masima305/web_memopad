@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home/index' => 'home#index'
+  get 'home/menu' => 'home#menu'
+  get 'home/memolist' => 'home#memolist'
+  get 'home/menu' => 'home#menu'
+  get 'home/setting' => 'home#setting'
+  get 'home/writing' => 'home#writing'
+  get 'home/reading' => 'home#reading'
+
 
   root 'home#index'
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
