@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'home/setting' => 'home#setting'
   get 'home/writing' => 'home#writing'
   get 'home/reading' => 'home#reading'
-
+  get 'home/deleting' => 'home#deleting'
+  get 'home/mailer' => 'home#mailer'
+  get 'home/revise' => 'home#revise'
 
   root 'home#index'
   

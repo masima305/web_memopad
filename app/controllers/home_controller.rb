@@ -18,4 +18,13 @@ class HomeController < ApplicationController
     def writing
     end
     
+    def deleting
+    end
+    
+    def mailer
+    end
+    
+    def revise
+    end
+    
 end
