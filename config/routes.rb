@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   get 'home/index' => 'home#index'
+  get 'home/setadd' => 'home#setadd'
+  get 'home/setdel/:id' => 'home#setdel'
+  
+  
+  
+  
   get 'home/menu' => 'home#menu'
   get 'home/memolist' => 'home#memolist'
   get 'home/menu' => 'home#menu'

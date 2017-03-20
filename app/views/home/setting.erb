@@ -1,34 +1,41 @@
+<!--진행중.-->
+
 <main>
 <article>
 
 
-
-
     <h1>세팅 페이지 입니다.</h1>
+<section class="set_list">
+    <p>지금 있는과목</p>
+    
+<div>
+    <% @subjectList.each do |p| %>
+        <p><%=p.category%><a href="/home/setdel/<%=p.id%>">[삭제]</a></p>
+    <% end %>
+    
+</div>
+</section>
 
-    <p>과목을 선택하세용</p>
-    <p>오픈소스</p>
-    <p>알고리즘</p>
-    <p>자바플그밍</p>
-    <p>컴퓨터구조</p>
+<section class="set_listin">
+   
+<form action="/home/setadd" method="GET">
 
-
-    <input type="date" name="bday" value="2017-03-18"><br>
-
-    <!-- value="2017-03-22" -->
-
-    <p>이메일: <input type="text" name="fname" value="masima305@gmail.com"></p>
+    <p>과목 추가하기: <input type="text" name="newsub" placeholder="과목이름을 쓰시오"></p>
     <input type="submit">
 
-    <p><a href = "/home/menu">섭밋 했다치고</p>
+</form>
+</section>
+
+<section>
+<form>
 
 
+    <p>이메일: <input type="text" name="fname" value="masima305@gmail.com"></p>
+    <input type="submit" value="변경">
 
-
-
-
-
-
+    <p><a href = "/home/menu">섭밋 했다치고</a></p>
+</form>
+</section>
 
 
 </article>

@@ -13,6 +13,21 @@ class HomeController < ApplicationController
     end
     
     def setting
+        @subjectList = Subject.all
+    end
+
+    def setadd
+        newsub = Subject.new
+        
+        newsub.category = params[:newsub]
+        newsub.save
+        redirect_to "/home/setting"
+    end
+    
+    def setdel
+        delsub = Subject.find(params[:id])
+        delsub.destroy
+        redirect_to "/home/setting"
     end
 
     def writing

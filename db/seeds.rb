@@ -6,5 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Name.create(uname: 'ina')
-Name.create(uname: 'jeonghoon')
+Subject.create(category: "음성학")
+Subject.create(category: "영어의이해")
+Subject.create(category: "구문론")
