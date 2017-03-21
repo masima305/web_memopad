@@ -31,6 +31,7 @@ class HomeController < ApplicationController
     end
 
     def writing
+        @subjectList = Subject.all
     end
     
     def deleting

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170320051246) do
   create_table "memos", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.boolean  "favorite"
+    t.integer  "favorite"
     t.string   "author"
     t.string   "memoId"
     t.string   "category"

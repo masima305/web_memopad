@@ -4,7 +4,7 @@ class CreateMemos < ActiveRecord::Migration
 
         t.string :title
         t.text :content
-        t.boolean :favorite
+        t.integer :favorite
         t.string :author
         t.string :memoId
         t.string :category

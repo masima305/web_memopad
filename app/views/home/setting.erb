@@ -1,47 +1,36 @@
-<!--진행중.-->
+<!-- //login 구현 후 email db 박기 요망-->
 
 <main>
-<article>
+    <article>
+        <h1>세팅 페이지 입니다.</h1>
+        <section class="set_list">
+            <p>지금 있는과목</p>
+                
+            <div>
+            
+                <% @subjectList.each do |p| %>
+                <p><%=p.category%><a href="/home/setdel/<%=p.id%>">[삭제]</a></p>
+                <% end %>
+            </div>
+        </section>
 
+        <section class="set_listin">
+            <form action="/home/setadd" method="GET">
+                <p>과목 추가하기: <input type="text" name="newsub" placeholder="과목이름을 쓰시오"></p>
+                <input type="submit" value="추가!">
+            </form>
+        </section>
 
-    <h1>세팅 페이지 입니다.</h1>
-<section class="set_list">
-    <p>지금 있는과목</p>
-    
-<div>
-    <% @subjectList.each do |p| %>
-        <p><%=p.category%><a href="/home/setdel/<%=p.id%>">[삭제]</a></p>
-    <% end %>
-    
-</div>
-</section>
-
-<section class="set_listin">
-   
-<form action="/home/setadd" method="GET">
-
-    <p>과목 추가하기: <input type="text" name="newsub" placeholder="과목이름을 쓰시오"></p>
-    <input type="submit">
-
-</form>
-</section>
-
-<section>
-<form>
-
-
-    <p>이메일: <input type="text" name="fname" value="masima305@gmail.com"></p>
-    <input type="submit" value="변경">
-
-    <p><a href = "/home/menu">섭밋 했다치고</a></p>
-</form>
-</section>
-
-
-</article>
+        <section>
+            <form>
+                <p>저장된 이메일:masima305@gmail.com</p>
+                <p>이메일: <input type="text" name="fname" value="masima305@gmail.com"></p>
+                <input type="submit" value="변경">
+                <p><a href = "/home/menu">섭밋 했다치고</a></p>
+            </form>
+        </section>
+    </article>
 </main>
-
-
 
 <footer>
     <p> 제작자 </p>

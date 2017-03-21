@@ -1,46 +1,31 @@
 <main>
-<article>
-
-
-
-
-
-<h1>쓰기 페이지 입니당</h1>
-
-
-
-<form action="/#" id="111">
-
-<select name="subject" form="111">
-<option value="0">과목을 선택하세용</option>
-<option value="1">오픈소스</option>
-<option value="2">알고리즘</option>
-<option value="3">자바플그밍</option>
-<option value="4">컴퓨터구조</option>
-</select>
-
-
-<input type="date" name="bday" value="2017-03-18"><br>
-
-<!-- value="2017-03-22" -->
-
-<input type="text" name="fname" placeholder="제목을 쓰세요"><br>
-<textarea rows="4" cols="50" placeholder="내용을 쓰세용">
-</textarea>
-<br>
-<input type="submit">
-</form>
-
-<p><a href = "/home/memolist">섭밋 했다치고</p>
-
-
-
-
-
-</article>
+    <article>
+        <h1>쓰기 페이지 입니당</h1>
+            
+            <section class="writ">
+            
+            <form action="/home/memoWrite" id="111">
+                
+                <select name="category">
+                    <% @subjectList.each do |p|%>
+                        <option value="<%= p.category %>"><%= p.category %></option>
+                    <% end %>
+                </select>
+                
+                <input type="date" name="bday"value="<%=Time.now.strftime("%Y-%m-%d")%>" ><br>
+    
+                <p><input type="text" name="title" placeholder="제목을 쓰세요">
+                 즐겨찾기 :<input type="checkbox" name="favorite" value="1"></p>
+                    
+                <p><textarea rows="30" name="content" cols="100" placeholder="내용을 쓰세용"></textarea><p>
+                <input type="submit">
+            </form>
+            
+            </section>
+            
+        <p><a href = "/home/memolist">섭밋 했다치고</p>
+    </article>
 </main>
-
-
 
 <footer>
     <p> 제작자 </p>

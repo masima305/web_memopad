@@ -72,3 +72,11 @@ section{
     float:right;
     margin-left: 0px;
 }
+
+/*writing page*/
+.writ textarea{
+    overflow-y: scroll;
+}
+.writ{
+    padding: 10px;
+}
