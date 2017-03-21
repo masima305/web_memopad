@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170320051246) do
     t.string   "author"
     t.string   "memoId"
     t.string   "category"
+    t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

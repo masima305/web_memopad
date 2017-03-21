@@ -4,6 +4,8 @@ class HomeController < ApplicationController
     end
 
     def memolist
+        @memolist = Memo.all
+        
     end
 
     def menu
@@ -41,6 +43,19 @@ class HomeController < ApplicationController
     end
     
     def revise
+    end
+    
+    def memoWrite
+        newMemo = Memo.new
+        newMemo.title = params[:title]
+        newMemo.content = params[:content]
+        newMemo.favorite = params[:favorite]
+        newMemo.category = params[:category]
+        newMemo.date = params[:date]
+        newMemo.save
+        
+        redirect_to "/home/memolist"
+        
     end
     
 end

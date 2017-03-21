@@ -8,6 +8,7 @@ class CreateMemos < ActiveRecord::Migration
         t.string :author
         t.string :memoId
         t.string :category
+        t.string :date
     
       t.timestamps null: false
     end
