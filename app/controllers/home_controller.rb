@@ -12,6 +12,8 @@ class HomeController < ApplicationController
     end
     
     def reading
+        @spe_memo = Memo.find(params[:id])
+        
     end
     
     def setting

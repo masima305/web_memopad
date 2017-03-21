@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'home/index' => 'home#index'
   get 'home/setadd' => 'home#setadd'
   get 'home/setdel/:id' => 'home#setdel'
+  get 'home/reading/:id' => 'home#reading'
   
   post 'home/memoWrite' =>'home#memoWrite'
   

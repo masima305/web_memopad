@@ -4,9 +4,7 @@
 	<h1>메모리스트 페이지입니다.</h1>
 		<hr>
 		<% @memolist.each do |p|%>
-		<p><%= p.date %></p>
-		<p><%= p.title %></p>
-		<p><%= p.content %></p>
+		<p><a href="/home/reading/<%=p.id%>"><%= p.title %></p>
 		<hr>
 		<% end %>
 
