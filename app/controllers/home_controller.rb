@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     end
 
     def memolist
-        @memolist = Memo.all
+        @memolist = Memo.order('date DESC').all
         
     end
 

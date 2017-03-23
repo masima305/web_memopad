@@ -83,3 +83,9 @@ section{
 .title{
     width:50%;
 }
+/*list page*/
+#memolist{
+    overflow-y: scroll;
+    eight: 150px;
+    
+}
