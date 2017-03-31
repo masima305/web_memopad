@@ -1,3 +1,172 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+
+/*general style*/
+
+body{
+    background-image: url(image-path('wall.jpg'));
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    text-align: center;
+    margin: 0px 20% 10% 20%;
+    background-image: url(image-path('notepad.png'));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    text-align: left;
+    height: 3%;
+    border : 1px solid black;
+    color: white;
+    padding: 0.7rem;
+}
+
+footer p{
+    margin: auto;
+}
+article{
+    text-align: center;
+    overflow: hidden;
+    height: 100%; 
+    
+}
+
+section{
+    background-color: white;
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+
+/*setting page*/
+
+.set_list{
+    overflow: hidden;
+    width: 35%;
+    text-align:center;
+    float:left;
+    margin-right: 0px;
+}
+.set_list div {
+    overflow-y: scroll;
+    height: 300px;
+}
+.set_list div p{
+    border: 1px solid black;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0,0,255,0.3);
+    width: 80%;
+    margin: 5px;
+}
+.set_listin{
+    overflow: hidden;
+    width: 35%;
+    height: 150px;
+    float:right;
+    margin-left: 0px;
+}
+
+/*writing page*/
+.writ textarea{
+    overflow-y: scroll;
+}
+.writ{
+    padding: 10px;
+}
+.title{
+    width:50%;
+}
+
+
+/*list page*/
+
+#memolist{
+    overflow-y: scroll;
+    height: 450px;
+    border: 1px solid black;
+}
+.list{
+    border: 1px solid black;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0,0,255,0.3);
+    width: 80%;
+    margin-left: 10%;
+}
+/*reading page*/
+.reader{
+    border: 1px solid black;
+    width: 89%;
+    height: 550px;
+    margin: 2.5%;
+    padding: 3%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    text-align: left;
+}
+.reader_wrapper{
+    
+}
+.reader_left{
+    border: 1px solid red;
+    overflow: hidden;
+    width: 79%;
+    text-align:center;
+    float:left;
+    margin-right: 0px;
+    margin-bottom: 3px;
+}
+.reader_right{
+    border: 1px solid black;
+    width: 15%;
+    height: 30%;
+    float:right;
+    margin-left: 0px;
+    height:10%;    
+    
+}
+
+.reader_right a{ 
+    text-decoration: none;
+    text-align: center;
+    font-size: 120%;
+    color: black;
+    margin: 0px;
+    
+}
+
+.reader_right i{
+    border : black 2px solid;
+    border-radius: 30%;
+    margin: 3%;
+    width : 50%;
+    height: 100%;
+}
+
+.reader_down{
+    border: 1px solid blue;
+    overflow: hidden;
+    width: 100%;
+}

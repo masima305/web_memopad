@@ -1,22 +1,31 @@
 <main>
-<article>
-
-	<section id="memolist">
-		<h1>메모리스트 페이지입니다.</h1>
-			<hr>
-			<% predate = 0 %>
-			<% @memolist.each do |p|%>
-				<% if p.date != predate %>
-					<h1><%= p.date %></h1>
-					<% predate = p.date %>
-				<% end %>
-				<p><a href="/home/reading/<%=p.id%>"><%= p.title %></p>
-			<% end %>
-	</section>
+	<article>
 	
-    <p><a href="/home/menu">메뉴로</a></p>
-</article>
+		<h1>메모리스트 페이지입니다.</h1>
+		<p>[과목별 보기]</p>
+		<section id="memolist">
+			
+					<hr>
+					<% predate = 0 %>
+					<% @memolist.each do |p|%>
+						
+						
+						<% if p.date != predate %>
+							<hr>
+							<h1><%= p.date %></h1>
+							<% predate = p.date %>
+						<% end %>
+						<div class="list">
+						<p><a href="/home/reading/<%=p.id%>"><%= p.title %></a></p>
+						</div>
+					<% end %>
+				
+		</section>
+		
+	    <p><a href="/home/menu">메뉴로</a></p>
+	</article>
 </main>
+
 <footer>
     <p> 제작자 </p>
 </footer>

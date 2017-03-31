@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     end
 
     def menu
+        @memolist = Memo.order('date DESC').all
     end
     
     def reading

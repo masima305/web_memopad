@@ -3,25 +3,26 @@ Rails.application.routes.draw do
   get 'home/setadd' => 'home#setadd'
   get 'home/setdel/:id' => 'home#setdel'
   get 'home/reading/:id' => 'home#reading'
+  get 'home/menu' => 'home#menu'
   
   post 'home/memoWrite' =>'home#memoWrite'
   
   
   
-  get 'home/menu' => 'home#menu'
-  get 'home/memolist' => 'home#memolist'
-  get 'home/menu' => 'home#menu'
-  get 'home/setting' => 'home#setting'
-  get 'home/writing' => 'home#writing'
-  get 'home/reading' => 'home#reading'
-  get 'home/deleting' => 'home#deleting'
-  get 'home/mailer' => 'home#mailer'
-  get 'home/revise' => 'home#revise'
+   get 'home/menu' => 'home#menu'
+   get 'home/memolist' => 'home#memolist'
+   get 'home/menu' => 'home#menu'
+   get 'home/setting' => 'home#setting'
+   get 'home/writing' => 'home#writing'
+   get 'home/reading' => 'home#reading'
+   get 'home/deleting' => 'home#deleting'
+   get 'home/mailer' => 'home#mailer'
+   get 'home/revise' => 'home#revise'
 
   root 'home#index'
   
   
-  # The priority is based upon order of creation: first created -> highest priority.
+  #  The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

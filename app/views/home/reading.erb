@@ -5,15 +5,32 @@
 <hr>
 <hr>
 
-<%= @spe_memo.title %>
 
-<p>글 이름이 있다 칩시다.</p>
-<p>글 내용이 있다 칩시다.</p>
-<hr>
+<section class="reader" >
+    <div class="reader_wrapper">
+        <div class="reader_left">
+            <h2><%= @spe_memo.title %> - <%= @spe_memo.category %></h2>
+            <p><%= @spe_memo.date %></p>
+        </div>
+        <div class="reader_right">
+            <div>
+                <a href="/home/memolist"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="/home/memolist"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <div>
+                <a href="/home/memolist"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="/home/memolist"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="reader_down">        
+            <p><%= @spe_memo.content %></p>
+        </div>
+        
+    </div>
+    
+    
+</section>
 
-<a href="/home/memolist"><p>[삭제하기]</p>
-<a href="/home/memolist"><p>[Email로 전송]</p>
-<a href="/home/memolist"><p>[수정하기]</p>
 <a href="/home/memolist"><p>[글 목록으로 가기]</p>
 
 
