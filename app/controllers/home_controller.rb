@@ -9,11 +9,12 @@ class HomeController < ApplicationController
     end
 
     def menu
-        @memolist = Memo.order('date DESC').all
+        @memolist = Memo.where(:favorite => 1).order('date DESC')
     end
     
     def reading
         @spe_memo = Memo.find(params[:id])
+        
         
     end
     
@@ -40,12 +41,17 @@ class HomeController < ApplicationController
     end
     
     def deleting
+        @one_memo = Memo.find(params[:id])
+        @one_memo.destroy
+        redirect_to "/home/memolist"
     end
     
     def mailer
     end
     
     def revise
+        @subjectList = Subject.all
+        @one_memo = Memo.find(params[:id])
     end
     
     def memoWrite
@@ -58,7 +64,17 @@ class HomeController < ApplicationController
         newMemo.save
         
         redirect_to "/home/memolist"
-        
     end
     
+    def memoReWrite
+        reMemo = Memo.find(params[:id])
+        reMemo.title = params[:title]
+        reMemo.content = params[:content]
+        reMemo.favorite = params[:favorite]
+        reMemo.category = params[:category]
+        reMemo.date = params[:date]
+        reMemo.save
+        
+        redirect_to "/home/reading/"+params[:id]
+    end
 end

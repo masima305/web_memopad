@@ -1,24 +1,22 @@
 Rails.application.routes.draw do
   get 'home/index' => 'home#index'
   get 'home/setadd' => 'home#setadd'
+  get 'home/menu' => 'home#menu'
+  get 'home/writing' => 'home#writing'
+  
   get 'home/setdel/:id' => 'home#setdel'
   get 'home/reading/:id' => 'home#reading'
-  get 'home/menu' => 'home#menu'
-  
+  get 'home/revise/:id' => 'home#revise'
+  get 'home/deleting/:id' => 'home#deleting'
+  post 'home/memoReWrite/:id' => 'home#memoReWrite'
   post 'home/memoWrite' =>'home#memoWrite'
   
-  
-  
-   get 'home/menu' => 'home#menu'
+
    get 'home/memolist' => 'home#memolist'
    get 'home/menu' => 'home#menu'
    get 'home/setting' => 'home#setting'
-   get 'home/writing' => 'home#writing'
-   get 'home/reading' => 'home#reading'
-   get 'home/deleting' => 'home#deleting'
    get 'home/mailer' => 'home#mailer'
-   get 'home/revise' => 'home#revise'
-
+  
   root 'home#index'
   
   

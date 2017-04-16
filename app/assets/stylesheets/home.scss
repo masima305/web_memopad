@@ -8,7 +8,7 @@
 /*general style*/
 
 body{
-    background-image: url(image-path('wall.jpg'));
+    background-color: black;
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body{
 main{
     text-align: center;
     margin: 0px 20% 10% 20%;
-    background-image: url(image-path('notepad.png'));
+     background-color: rgb(153,206,102);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +48,6 @@ article{
 
 section{
     background-color: white;
-    border: 1px solid black;
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -73,7 +72,6 @@ section{
     height: 300px;
 }
 .set_list div p{
-    border: 1px solid black;
     border-radius: 20px;
     color: white;
     background-color: rgba(0,0,255,0.3);
@@ -105,10 +103,8 @@ section{
 #memolist{
     overflow-y: scroll;
     height: 450px;
-    border: 1px solid black;
 }
 .list{
-    border: 1px solid black;
     border-radius: 20px;
     color: white;
     background-color: rgba(0,0,255,0.3);
@@ -117,7 +113,6 @@ section{
 }
 /*reading page*/
 .reader{
-    border: 1px solid black;
     width: 89%;
     height: 550px;
     margin: 2.5%;
@@ -130,7 +125,6 @@ section{
     
 }
 .reader_left{
-    border: 1px solid red;
     overflow: hidden;
     width: 79%;
     text-align:center;
@@ -139,7 +133,6 @@ section{
     margin-bottom: 3px;
 }
 .reader_right{
-    border: 1px solid black;
     width: 15%;
     height: 30%;
     float:right;
@@ -166,7 +159,31 @@ section{
 }
 
 .reader_down{
-    border: 1px solid blue;
     overflow: hidden;
     width: 100%;
+}
+.btn{
+    text-align : center;
+    margin-left : 45%;
+    margin-right : 45%;
+    height: 2em;
+    color: black;
+    background-color: rgb(150,150,255);
+    width: 10%;
+}
+.btn a{
+    text-decoration: none;
+}
+.btn{
+    text-align : center;
+    
+    margin-right : 45%;
+    height: 2em;
+    color: black;
+    background-color: rgb(150,150,255);
+    width: 10%;
+}
+#btn_read{
+    width: 15%;
+    margin-left : 40%;
 }

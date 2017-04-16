@@ -6,7 +6,7 @@
     <h2>즐겨찾기 한 목록</h2>
 		<section id="memolist">
 			
-					<hr>
+
 					<% predate = 0 %>
 					<% @memolist.each do |p|%>
 						
@@ -17,15 +17,16 @@
 							<% predate = p.date %>
 						<% end %>
 						<div class="list">
-						<p><a href="/home/reading/<%=p.id%>"><%= p.title %></a></p>
+						<p><a href="/home/reading/<%=p.id%>"><%= p.title %> ---- <%= p.category %></a></p>
 						</div>
 					<% end %>
+					<hr>
 		</section>
 </div>
 
-<p><a href = "/home/writing">필기쓰기</p>
-<p><a href = "/home/memolist">목록보기</p>
-<p><a href = "/home/setting">관리</p>
+<p class="btn"><a href = "/home/writing">필기쓰기</p>
+<p class="btn"><a href = "/home/memolist">목록보기</p>
+<p class="btn"><a href = "/home/setting">관리</p>
 
 
 

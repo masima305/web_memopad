@@ -1,17 +1,44 @@
 <main>
-<article>
-
-<h1> 수정페이지입니다. </h1>
-
-
-</article>
+    <article>
+        <h1>수정 페이지 입니당</h1>
+            
+            <section class="writ">
+            
+            <form action="/home/memoReWrite/<%=@one_memo.id%>" method="POST">
+                
+                <select name="category">
+                    <% @subjectList.each do |p|%>
+                        <% if @one_memo.category === p.category%>
+                            <option value="<%= p.category %>", selected="selected"><%= p.category %></option>
+                        <% else %>
+                            <option value="<%= p.category %>"><%= p.category %></option>
+                        <% end %>
+                    <% end %>
+                </select>
+                
+                <input type="date" name="date" value="<%=@one_memo.date%>"<br>
+    
+                <p><input type="text" name="title" class="title" value="<%= @one_memo.title %>" placeholder="제목을 쓰세요">
+                 즐겨찾기 :<input type="checkbox" name="favorite" value="<%=@one_memo.favorite%>"></p>
+                    
+                <p><textarea rows="30" name="content" cols="100" placeholder="내용을 쓰세용"><%=@one_memo.content%></textarea><p>
+                <input type="submit">
+            </form>
+            
+            </section>
+            
+        <p><a href = "/home/memolist">섭밋 했다치고</p>
+    </article>
 </main>
-
-
 
 <footer>
     <p> 제작자 </p>
 </footer>
+
+
+
+
+
 
 
 

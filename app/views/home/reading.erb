@@ -2,9 +2,6 @@
 <article>
 
 <h1>글읽기 페이지입니다.</h1>
-<hr>
-<hr>
-
 
 <section class="reader" >
     <div class="reader_wrapper">
@@ -14,11 +11,11 @@
         </div>
         <div class="reader_right">
             <div>
-                <a href="/home/memolist"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                <a href="/home/deleting/<%= @spe_memo.id %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 <a href="/home/memolist"><i class="fa fa-envelope" aria-hidden="true"></i></a>
             </div>
             <div>
-                <a href="/home/memolist"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="/home/revise/<%= @spe_memo.id %>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                 <a href="/home/memolist"><i class="fa fa-star-o" aria-hidden="true"></i></a>
             </div>
         </div>
@@ -31,7 +28,7 @@
     
 </section>
 
-<a href="/home/memolist"><p>[글 목록으로 가기]</p>
+<p class="btn" id="btn_read"><a href="/home/memolist">글 목록으로 가기</p>
 
 
 </article>
