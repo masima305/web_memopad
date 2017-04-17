@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'home/reading/:id' => 'home#reading'
   get 'home/revise/:id' => 'home#revise'
   get 'home/deleting/:id' => 'home#deleting'
+  get 'home/searchlist' => 'home#searchlist'
   post 'home/memoReWrite/:id' => 'home#memoReWrite'
   post 'home/memoWrite' =>'home#memoWrite'
   

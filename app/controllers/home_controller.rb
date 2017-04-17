@@ -77,4 +77,12 @@ class HomeController < ApplicationController
         
         redirect_to "/home/reading/"+params[:id]
     end
+    
+    def searchlist
+        
+        @keyword= params[:keyword]
+        @serMemo_ti= Memo.where("title like ?", "%#{@keyword}%")
+        @serMemo_con= Memo.where("content like ?", "%#{@keyword}%")
+        
+    end
 end

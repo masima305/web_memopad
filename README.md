@@ -26,7 +26,7 @@
 1. User -- id, passward, memoCount,
 2. memo -- title, content, favorite, time, author, memoId, category
 3. category
-4. 
+4. http://www.justinweiss.com/articles/search-and-filter-rails-models-without-bloating-your-controller/
 ---------------------------------------------------------------
 
 참고사항.

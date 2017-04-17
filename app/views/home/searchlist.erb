@@ -1,0 +1,55 @@
+
+<main>
+	<article>
+		<h1>"<%=@keyword%>" 검색결과 입니다.</h1>
+		<section id="memolist">
+					<h1>제목 검색결과</h1>
+					<% if @serMemo_ti.empty? %>
+						<h1>제목 검색결과 없음</h1>
+					<% else%>
+						<% predate = 0 %>
+						<% @serMemo_ti.each do |p|%>
+							<% if p.date != predate %>
+								<hr>
+								<h1><%= p.date %></h1>
+								<% predate = p.date %>
+							<% end %>
+							<div class="list">
+							<p><a href="/home/reading/<%=p.id%>"><%= p.title %> ---- <%=p.category%> </a></p>
+							</div>
+						<% end %>
+					<% end %>
+					
+					<hr>
+					<h1>내용 검색결과</h1>
+					
+					<% if @serMemo_con.empty? %>
+						<h1>내용 검색결과 없음</h1>
+					<% else%>
+						<% cn_predate = 0 %>
+						<% @serMemo_con.each do |p|%>
+							<% if p.date != cn_predate %>
+								<hr>
+								<h1><%= p.date %></h1>
+								<% cn_predate = p.date %>
+							<% end %>
+							<div class="list">
+							<p><a href="/home/reading/<%=p.id%>"><%= p.title %> ---- <%=p.category%> </a></p>
+							</div>
+						<% end %>
+					<% end %>
+		</section>
+		
+		
+		
+	    <p class = "btn"><a href="/home/menu">메뉴로</a></p>
+	</article>
+</main>
+
+<footer>
+	<form action="/home/searchlist" method="GET">
+    	<p>검색 :<input type="text" name="keyword" class="title" placeholder="검색하기"><input type="submit"></p>
+    </form>
+</footer>
+
+
