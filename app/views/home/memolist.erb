@@ -1,8 +1,7 @@
 <main>
 	<article>
-	
 		<h1>메모리스트 페이지입니다.</h1>
-		<section id="memolist">s
+		<section id="memolist">
 					<% predate = 0 %>
 					<% @memolist.each do |p|%>
 						<% if p.date != predate %>
@@ -23,5 +22,7 @@
 	<form action="/home/searchlist" method="GET">
     	<p>검색 :<input type="text" name="keyword" class="title" placeholder="검색하기"><input type="submit"></p>
     </form>
+		<p class=btn><%= link_to "로그아웃", destroy_user_session_path, :method => :delete %></p>
 </footer>
 
+   

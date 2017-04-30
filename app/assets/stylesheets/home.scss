@@ -34,10 +34,19 @@ footer{
     border : 1px solid black;
     color: white;
     padding: 0.7rem;
+    display: flex;
 }
 
-footer p{
+footer form{
+    margin: 0;
+    width: 40%;
+}
+footer form p{
     margin: auto;
+}
+footer .btn{
+    margin: 0;
+    margin-left: 45%;
 }
 article{
     text-align: center;
@@ -176,7 +185,6 @@ section{
 }
 .btn{
     text-align : center;
-    
     margin-right : 45%;
     height: 2em;
     color: black;

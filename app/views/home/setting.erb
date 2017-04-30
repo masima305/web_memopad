@@ -23,9 +23,9 @@
 
         <section>
             <form>
-                <p>저장된 이메일:masima305@gmail.com</p>
-                <p>이메일: <input type="text" name="fname" value="masima305@gmail.com"></p>
-                <input type="submit" value="변경">
+                <p>저장된 이메일 : <%=@email%></p>
+                <p>변경할 이메일 : <input type="text" name="fname" placeholder="아직 구현 안함"></p>
+                <input type="submit" value="변경" disabled />
                 <p class="btn"><a href = "/home/menu">돌아가기</a></p>
             </form>
         </section>
@@ -36,6 +36,7 @@
 	<form action="/home/searchlist" method="GET">
     	<p>검색 :<input type="text" name="keyword" class="title" placeholder="검색하기"><input type="submit"></p>
     </form>
+   <p class=btn><%= link_to "로그아웃", destroy_user_session_path, :method => :delete %></p>
 </footer>
 
 

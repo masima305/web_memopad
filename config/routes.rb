@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'home/index' => 'home#index'
   get 'home/setadd' => 'home#setadd'
   get 'home/menu' => 'home#menu'
   get 'home/writing' => 'home#writing'
+  get 'home/forbid' => 'home#forbid'
+  
   
   get 'home/setdel/:id' => 'home#setdel'
   get 'home/reading/:id' => 'home#reading'
@@ -13,12 +16,13 @@ Rails.application.routes.draw do
   post 'home/memoWrite' =>'home#memoWrite'
   
 
-   get 'home/memolist' => 'home#memolist'
-   get 'home/menu' => 'home#menu'
-   get 'home/setting' => 'home#setting'
-   get 'home/mailer' => 'home#mailer'
+  get 'home/memolist' => 'home#memolist'
+  get 'home/menu' => 'home#menu'
+  get 'home/setting' => 'home#setting'
+  get 'home/mailer' => 'home#mailer'
   
-  root 'home#index'
+  
+  root 'home#menu'
   
   
   #  The priority is based upon order of creation: first created -> highest priority.

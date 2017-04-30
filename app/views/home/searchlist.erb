@@ -50,6 +50,7 @@
 	<form action="/home/searchlist" method="GET">
     	<p>검색 :<input type="text" name="keyword" class="title" placeholder="검색하기"><input type="submit"></p>
     </form>
+   <p class=btn><%= link_to "로그아웃", destroy_user_session_path, :method => :delete %></p>
 </footer>
 
 

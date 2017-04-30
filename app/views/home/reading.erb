@@ -24,11 +24,10 @@
         </div>
         
     </div>
-    
-    
+
 </section>
 
-<p class="btn" id="btn_read"><a href="/home/memolist">글 목록으로 가기</p>
+<p class="btn" id="btn_read"><a href="/home/memolist">글 목록으로 가기</a></p>
 
 
 </article>
@@ -39,6 +38,7 @@
 	<form action="/home/searchlist" method="GET">
     	<p>검색 :<input type="text" name="keyword" class="title" placeholder="검색하기"><input type="submit"></p>
     </form>
+        <p class=btn><%= link_to "로그아웃", destroy_user_session_path, :method => :delete %></p>
 </footer>
 
 
