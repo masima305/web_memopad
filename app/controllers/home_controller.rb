@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     
     def memolist
         if user_signed_in?
-            @memolist = Memo.order('date DESC').all
+            @memolist = Memo.where(author: current_user.email).order('date DESC').all
         else
             redirect_to 'user_signed_in'
         end
@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
     def menu
         if user_signed_in?
-            @memolist = Memo.where(:favorite => 1).order('date DESC')
+            @memolist = Memo.where(:favorite => "checked",author: current_user.email).order('date DESC')
         else
             redirect_to '/users/sign_in'
         end
@@ -22,6 +22,12 @@ class HomeController < ApplicationController
     def reading
         if user_signed_in?
             @spe_memo = Memo.find(params[:id])
+            if @spe_memo.favorite != "checked"
+                @star = "-o"
+            end
+            if current_user.email != @spe_memo.author
+                redirect_to '/home/forbid'
+            end
         else
             redirect_to '/users/sign_in'
         end
@@ -30,7 +36,7 @@ class HomeController < ApplicationController
     def setting
         if user_signed_in?
             @email = current_user.email
-            @subjectList = Subject.all
+            @subjectList = Subject.where(author: current_user.email)
         else
             redirect_to '/users/sign_in'
         end
@@ -64,7 +70,7 @@ class HomeController < ApplicationController
 
     def writing
         if user_signed_in?
-            @subjectList = Subject.all
+            @subjectList = Subject.where(author: current_user.email)
         else
             redirect_to '/users/sign_in'
         end
@@ -89,8 +95,9 @@ class HomeController < ApplicationController
     
     def revise
         if user_signed_in?    
-            @subjectList = Subject.all
+            @subjectList = Subject.where(author: current_user.email)
             @one_memo = Memo.find(params[:id])
+            @cked = @one_memo.favorite
         else
             redirect_to '/users/sign_in'
         end
@@ -134,6 +141,37 @@ class HomeController < ApplicationController
             @serMemo_con= Memo.where("content like ?", "%#{@keyword}%")
         else
             redirect_to '/users/sign_in'
+        end 
+    end
+    
+    def fachange
+        if user_signed_in?
+            reMemo = Memo.find(params[:id])
+                if reMemo.favorite == "checked"
+                    reMemo.favorite = " "
+                else 
+                    reMemo.favorite = "checked"
+                end
+            reMemo.save
+            redirect_to '/home/reading/'+params[:id]
+        else
+            redirect_to '/users/sign_in'
         end
     end
+    
+    def lifachange
+        if user_signed_in?
+            reMemo = Memo.find(params[:id])
+                if reMemo.favorite == "checked"
+                    reMemo.favorite = " "
+                else 
+                    reMemo.favorite = "checked"
+                end
+            reMemo.save
+            redirect_to '/home/memolist'
+        else
+            redirect_to '/users/sign_in'
+        end
+    end
+    
 end

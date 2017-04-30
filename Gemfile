@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 gem 'devise'
 gem 'font-awesome-sass'
+gem "fog-aws"
+gem 'carrierwave', '~> 1.0'
+gem 'mailgun-ruby'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -16,13 +16,14 @@ ActiveRecord::Schema.define(version: 20170417122753) do
   create_table "memos", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.integer  "favorite"
+    t.string   "favorite"
     t.string   "author"
     t.string   "memoId"
     t.string   "category"
     t.string   "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "image_url",  default: ""
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "names", force: :cascade do |t|

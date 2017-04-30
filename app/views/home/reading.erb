@@ -16,7 +16,9 @@
             </div>
             <div>
                 <a href="/home/revise/<%= @spe_memo.id %>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                <a href="/home/memolist"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                <form action="/home/fachange/<%=@spe_memo.id%>" method="GET">
+                    <button><i class="fa fa-star<%=@star%>" aria-hidden="true"></i></button>
+                </form>
             </div>
         </div>
         <div class="reader_down">        

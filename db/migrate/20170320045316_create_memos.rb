@@ -4,11 +4,12 @@ class CreateMemos < ActiveRecord::Migration
 
         t.string :title
         t.text :content
-        t.integer :favorite
+        t.string :favorite
         t.string :author
         t.string :memoId
         t.string :category
         t.string :date
+        t.string :image_url,  :default => ""
     
       t.timestamps null: false
     end

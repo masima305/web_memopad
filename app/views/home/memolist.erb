@@ -3,6 +3,7 @@
 		<h1>메모리스트 페이지입니다.</h1>
 		<section id="memolist">
 					<% predate = 0 %>
+					<% @star = " " %>
 					<% @memolist.each do |p|%>
 						<% if p.date != predate %>
 							<hr>
@@ -10,7 +11,17 @@
 							<% predate = p.date %>
 						<% end %>
 						<div class="list">
-						<p><a href="/home/reading/<%=p.id%>"><%= p.title %> ---- <%=p.category%> </a></p>
+							<p>
+								<a href="/home/reading/<%=p.id%>"><%= p.title %> ---- <%=p.category%> </a>
+							</p>
+							<% if p.favorite != "checked"%>
+							<% @star="-o"%>
+							<% else %>
+							<% @star=" "%>
+							<%end%>
+							<form action="/home/lifachange/<%=p.id%>" method="GET">
+	                    		<button><i class="fa fa-star<%=@star%>" aria-hidden="true"></i></button>
+	               			</form>	
 						</div>
 					<% end %>
 		</section>
