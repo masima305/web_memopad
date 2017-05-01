@@ -2,6 +2,10 @@
 
 ---
 
+https://peaceful-stream-23528.herokuapp.com/users/sign_in
+위 링크에서 이용이 가능합니다
+(무료버전이라 하루에 17시간동안만 가동중)
+
 ### 내맘대로 메모장
 
 페이지 구성은 다음과 같습니다.
